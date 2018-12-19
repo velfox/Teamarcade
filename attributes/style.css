@@ -1,0 +1,113 @@
+/* alegemeen layout fonts etc */
+
+body{
+    background-color: #c45d15;
+}
+
+h3 
+
+/* end algemeen layout */
+
+/* header */ 
+header{
+}
+
+.scoial-icons{
+    text-align: center;
+}
+
+.logo{
+    height: 120px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* start menu */
+.menu{
+    background-color: black;
+    background-image: url(/attributes/img/monstersbackground.png);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #fff;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+.logosvg{
+    padding-top: 10px;
+    height: 120px;
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+transform: rotate(1deg);
+}
+
+.logosvg:hover{
+    height: 122px;
+    -webkit-box-shadow: -5px 10px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -5px 10px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: -5px 10px 10px 0px rgba(0,0,0,0.25);
+    transform: rotate(2deg);
+}
+
+ul {
+    list-style-type: none;
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    background-color: #c45d15;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+    height: 20px;
+  }
+  
+  li a:hover:not(.active) {
+    height: 20px;
+    background-color: #111;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+  .menulinks{
+      margin-top: 20px;
+  }
+
+  .icon-img{
+      height: 100%;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;   
+  }
+
+  .icon-img:hover{
+    height: 105%;
+    -webkit-box-shadow: 1px 10px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 10px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 10px 16px 0px rgba(0,0,0,0.75);
+  }
+/* end header  */ 
