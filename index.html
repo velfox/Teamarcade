@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Teamarcade Home</title>
-    <link rel="stylesheet" href="attributes/style.css">
     <link rel="stylesheet" href="attributes/css_reset.css">
+    <link rel="stylesheet" href="attributes/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,27 +16,100 @@
                     <a href=""> <img class="logosvg" src="attributes/img/Teamarcade_logo.svg" alt="Teamarcade_logo">  </a>
             </section>
             <section class="menulinks">
-                    <ul>
-                        <li><a href="default.asp">Home</a></li>
-                        <li><a href="news.asp">Nieuws</a></li>
-                        <li><a href="contact.asp">Events</a></li>
-                        <li><a href="about.asp">teams</a></li>
-                        <li><a href="about.asp">shop</a></li>
-                        <li><a href="about.asp">contact</a></li>
-                    </ul>
-                <h1>teste</h1>
-                    <section class="scoial-icons"> 
-                            <a href=""> <img class="icon-img" src="attributes/img/icons/discord.png" alt="icon-discrod"> <p>discord</p> </a>
-                            <a href=""> <img src="attributes/img/" alt="icon-twitch"> </a>
-                            <a href=""> <img src="attributes/img/" alt="icon-twitter"> </a>
+                <ul>
+                    <li><a href="default.asp">Home</a></li>
+                    <li><a href="news.asp">Nieuws</a></li>
+                    <li><a href="contact.asp">Events</a></li>
+                    <li><a href="about.asp">teams</a></li>
+                    <li><a href="about.asp">shop</a></li>
+                    <li><a href="about.asp">contact</a></li>
+                </ul>
+            </section>
+            <section class="scoial-icons">
+                <section class="icon-row">
+                    <a href=""> <img class="icon-img" src="attributes/img/icons/discord.png" alt="icon-discrod"> </a>
+                    <a href=""> <img class="icon-img" src="attributes/img/icons/twitch.png" alt="icon-twitch"> </a>
+                </section>
+                <section class="icon-row">
+                    <a href=""> <img class="icon-img" src="attributes/img/icons/youtube.png" alt="icon-twitter"> </a>
+                    <a href=""> <img class="icon-img" src="attributes/img/icons/facebook.png" alt="icon-twitch"> </a>
+                </section>
+                <section class="icon-row">
+                        <a href=""> <img class="icon-img" src="attributes/img/icons/twitter.png" alt="icon-twitter"> </a>
+                        <a href=""> <img class="icon-img" src="attributes/img/icons/instagram.png" alt="icon-twitch"> </a>
                     </section>
             </section>
         </section>
-
-
     </header>
-    <section class="test"> 
-
+    <section class="banner"> 
+        <section class="video-banner">
+            <img src="attributes/img/1x/banner-video-zk-l.png" alt="banner-zk">
+            <video id="banner-video" height="500px" loop>
+                <source src="attributes/video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <img src="attributes/img/1x/banner-video-zk.png" alt="banner-zk">
+            <section  class="video-buttons">
+                <button class="playbutton play" onclick="playPause()">Play/Pause</button>
+                <button class="soundbutton mute">toggle</button>
+            </section>
+        </section>
+        <section class="discord-banner">
+        </section>
     </section>
+    <section class="main-content">
+        <section class="introduction">
+        </section>
+        <article class="Events">
+        </article>
+        <section class="news">
+            <article class="nieuw-item">
+
+            </article>
+            <article class="nieuw-item">
+
+            </article>
+        </section>
+    </section>
+
+    
 </body>
 </html>
+
+
+<script>
+$("#banner-video").prop('muted', true);
+var bannervideo = document.getElementById("banner-video"); 
+if (bannervideo.paused) 
+    bannervideo.play(); 
+
+$(".soundbutton").click(function () {
+    if ($("#banner-video").prop('muted')) {
+        $("#banner-video").prop('muted', false);
+        $(".soundbutton").removeClass('unmute');
+         $(".soundbutton").addClass('mute');
+
+    } else {
+        $("#banner-video").prop('muted', true);
+        $(".soundbutton").removeClass('mute');
+        $(".soundbutton").addClass('unmute');
+    }
+    console.log($("#banner-video").prop('muted'))
+});
+
+function playPause() { 
+    if (bannervideo.paused) {
+    bannervideo.play();
+    $(".playbutton").removeClass('pause');
+    $(".playbutton").addClass('play');
+    }
+    else{
+    bannervideo.pause();
+    $(".playbutton").removeClass('play');
+    $(".playbutton").addClass('pause');
+    }
+  } 
+
+</script>
+
