@@ -56,20 +56,56 @@
             </section>
         </section>
         <section class="discord-banner">
+            <img class="nesController" src="attributes/img/controller4x.png" alt="contoller">
+            <a href="https://discord.gg/EQefvUM"> <section class="discordControllerButton">  </section> </a>
         </section>
     </section>
     <section class="main-content">
-        <section class="introduction">
-        </section>
-        <article class="Events">
-        </article>
-        <section class="news">
-            <article class="nieuw-item">
-
-            </article>
-            <article class="nieuw-item">
-
-            </article>
+        <section class="main-content-container">
+            <section class="row-2-1">
+                <section class="introduction">
+                    <section class="title">
+                        <img class="introduction-porro"src="/attributes/img/muntje.gif" alt="">
+                        <section class="tilte-text">
+                            <h1> Events </h1>
+                            <h2> Samen gaan we voor goud!</h2>
+                        </section>
+                    </section>
+                    <p> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten. </p>
+                </section>
+                <section class="news">
+                    <article class="nieuw-item">
+                            <h3> TeamArcade!? </h3>
+                            <h4>alleen maar liefde</h4>
+                    </article>
+                    <article class="nieuw-item">
+                            <h3> TeamArcade!? </h3>
+                            <h4>alleen maar liefde</h4>
+                    </article>
+                </section>
+            </section>
+            <section class="row-1-1">
+                    <section class="introduction">
+                        <section class="title">
+                            <img class="introduction-porro"src="/attributes/img/porro.gif" alt="">
+                            <section class="tilte-text">
+                                <h1> TeamArcade!? </h1>
+                                <h2>alleen maar liefde</h2>
+                            </section>
+                        </section>
+                        <p> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten. </p>
+                    </section>
+                    <section class="news">
+                        <article class="nieuw-item">
+                                <h3> TeamArcade!? </h3>
+                                <h4>alleen maar liefde</h4>
+                        </article>
+                        <article class="nieuw-item">
+                                <h3> TeamArcade!? </h3>
+                                <h4>alleen maar liefde</h4>
+                        </article>
+                    </section>
+                </section>
         </section>
     </section>
 
@@ -77,27 +113,29 @@
 </body>
 </html>
 
-
+<!-- video controls -->
 <script>
 $("#banner-video").prop('muted', true);
 var bannervideo = document.getElementById("banner-video"); 
 if (bannervideo.paused) 
     bannervideo.play(); 
 
+// mute video
 $(".soundbutton").click(function () {
     if ($("#banner-video").prop('muted')) {
         $("#banner-video").prop('muted', false);
-        $(".soundbutton").removeClass('unmute');
-         $(".soundbutton").addClass('mute');
+        $(".soundbutton").removeClass('mute');
+         $(".soundbutton").addClass('unmute');
 
     } else {
         $("#banner-video").prop('muted', true);
-        $(".soundbutton").removeClass('mute');
-        $(".soundbutton").addClass('unmute');
+        $(".soundbutton").removeClass('unmute');
+        $(".soundbutton").addClass('mute');
     }
     console.log($("#banner-video").prop('muted'))
 });
 
+// play video
 function playPause() { 
     if (bannervideo.paused) {
     bannervideo.play();
