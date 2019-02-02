@@ -18,6 +18,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
+<?php session_start();
+    
+    //zet sessions om in variables
+    if(isset($_SESSION['oauth2state'])){
+        $loggedIn = $_SESSION['oauth2state'];
+        $userImg = "https://cdn.discordapp.com/avatars/".$_SESSION['id']."/".$_SESSION['avatar'].".jpg";
+    }
+
+    //loguit option
+    if(isset($_POST['loguit'])){
+    session_destroy();
+    header('Location: index.php');
+    }
+    
+    
+
+
+?>
 <body>
     <header>
         <section id="menu" class="menu">
@@ -40,6 +58,24 @@
                     <div class="icon-youtube icon-img"></div>
                     <div class="icon-twitter icon-img"></div>
                     <div class="icon-customwebsite icon-img"></div>
+            </section>
+            <section class="user-box" id="user-box">
+            <?php if(!isset($loggedIn)){ ?>
+                <section class="user-options">
+                    <form action="/attributes/loginsysteem/login.php" method="post">
+                    <input type="submit" value="Inloggen met discord"
+                        name="Submit" id="frm1_submit" />
+                </form>
+                </section> 
+            <?php } else { ?>
+                <img class="user-img" src="<?= $userImg?>" alt="">
+                <section class="user-options">
+                <div class="user-name"> hallo user </div>
+                    <form action="" method="post">
+                        <input class="news-button" type="submit" value="uitloggen" name="loguit" id="loguit"/>
+                    </form>
+                </section> 
+            <?php } ?>
             </section>
         </section>
     </header>
