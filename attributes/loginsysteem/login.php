@@ -9,7 +9,7 @@ echo ('Main screen turn on!<br/><br/>');
 $provider = new \Wohali\OAuth2\Client\Provider\Discord([
     'clientId' => '540866512932831232',
     'clientSecret' => 'OZFZEH4YIR-i7pbYK8TiLbxnW7mVNAAE',
-    'redirectUri' => 'http://teamarcade.fox/login.php'
+    'redirectUri' => 'http://teamarcade.fox/attributes/loginsysteem/login.php'
 ]);
 $option = [
         'scope' => ['identify','email','guilds']
