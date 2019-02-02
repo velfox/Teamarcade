@@ -24,6 +24,7 @@
     if(isset($_SESSION['oauth2state'])){
         $loggedIn = $_SESSION['oauth2state'];
         $userImg = "https://cdn.discordapp.com/avatars/".$_SESSION['id']."/".$_SESSION['avatar'].".jpg";
+        $name = $_SESSION['name']; 
     }
 
     //loguit option
@@ -63,16 +64,15 @@
             <?php if(!isset($loggedIn)){ ?>
                 <section class="user-options">
                     <form action="/attributes/loginsysteem/login.php" method="post">
-                    <input type="submit" value="Inloggen met discord"
-                        name="Submit" id="frm1_submit" />
+                    <input type="submit" class="news-button discord-button" value="Inloggen met discord" name="Submit" id="frm1_submit" />
                 </form>
                 </section> 
             <?php } else { ?>
                 <img class="user-img" src="<?= $userImg?>" alt="">
                 <section class="user-options">
-                <div class="user-name"> hallo user </div>
+                <div class="user-name"> <h2>hallo <?= $name ?> </h2> </div>
                     <form action="" method="post">
-                        <input class="news-button" type="submit" value="uitloggen" name="loguit" id="loguit"/>
+                        <input class="news-button discord-button" type="submit" value="uitloggen" name="loguit" id="loguit"/>
                     </form>
                 </section> 
             <?php } ?>

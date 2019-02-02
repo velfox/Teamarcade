@@ -797,22 +797,40 @@ footer p a:hover{
 .user-img{
     transition: all 1s;
     margin-bottom: 1px;
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     border-style: solid;
-    border-width: 2px;
-    border-color: #f1902c;
+    border-width: 0px;
+    border-color: #fff;
+    border-radius: 50px;
 }
 
 .user-box{
     display: flex;
     flex-direction: row;
-    background-color: #2c88f1;
+    background-color: #26262B;
     padding: 5px;
+    color: #fff;
+    background: url('/attributes/img/discordbg.PNG');
+    background-position: center;
 }
 
 .user-options{
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
+}
+
+.discord-button{
+    background-color: #7289da;
+    background-image: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+.discord-button:hover{
+    background-color: #fff;
+    background-image: none;
+    color: #7289da;
+    border-color: #7289da;
 }
