@@ -19,6 +19,11 @@
                 <section class="footer-text">
                 <p> Site ontwikkeld door: TA-Velfox & TA-Thiemo </p>
                 <p> voor vragen of opmerkingen join <a href=""> discord!  </a></p>
+                </section>
             </section>
+            <section class="gezijk">
+                    <p class="footer-title"> VelFox & Creative Storm </p>
+                <section class="footer-text">
+                <p> Official partner TeamArcade</p>
             </section>
     </footer>    

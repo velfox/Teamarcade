@@ -63,7 +63,7 @@ function myFunction() {
     menu.style.position='fixed';
     document.getElementsByClassName("logosvg").className = "test";
     var logo = document.getElementById("logosvg");
-    logo.style.height = 80 + "px";
+    logo.style.height = 60 + "px";
     var menu = document.getElementById("menu");
     menu.style.height = 80 + "px";
     var menu = document.getElementById("menulinks");
