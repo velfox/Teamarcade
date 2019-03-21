@@ -72,12 +72,6 @@ p{
 
 /* header */
 
-.logo {
-    height: 120px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* start menu */
 
@@ -96,6 +90,12 @@ p{
     -webkit-transition: all 1s;
     /* Safari */
     transition: all 1s;
+}
+
+.logo {
+    height: 120px;
+    text-align: center;
+    margin-left: 20px;
 }
 
 .logosvg {
