@@ -4,11 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
-
 $options = ['scope' => ['identify', 'email', 'guilds']];
-
-
-
 
 $provider = new \Wohali\OAuth2\Client\Provider\Discord([
     'clientId' => '540866512932831232',

@@ -30,7 +30,7 @@
             <?php } else { ?>
                 <img class="user-img" src="<?= $userImg?>" alt="">
                 <section class="user-options">
-                <div class="user-name"> <h2>hallo <?= $name ?> </h2> </div>
+                <div class="user-name"> <h2>Ey, <?= $name ?> </h2> </div>
                     <form action="" method="post">
                         <input class="news-button discord-button" type="submit" value="uitloggen" name="loguit" id="loguit"/>
                     </form>

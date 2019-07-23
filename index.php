@@ -2,9 +2,19 @@
 <html lang="en">
 
 
+<?php 
+session_start();
+include_once 'attributes/includes/dbc.inc.php';
+include_once 'attributes/includes/user.inc.php';
+
+$user = new User;
+// $user->getUserData()
+?>
+
+
 <?php include_once 'attributes/templates/head.php'; ?>
 
-<?php include_once 'attributes/templates/session.php'; ?> 
+<!-- <?php include_once 'attributes/templates/session.php'; ?>  -->
 <body>
 <?php include_once 'attributes/templates/menu.php'; ?> 
     <section class="banner"> 
@@ -34,7 +44,7 @@
                     <section class="title">
                         <img class="introduction-porro"src="/attributes/img/muntje.gif" alt="">
                         <section class="tilte-text">
-                            <h1> Events </h1>
+                            <h1> Events <?= $name ?> </h1>
                             <h2> Samen gaan we voor goud!</h2>
                         </section>
                     </section>
